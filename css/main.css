@@ -1,6 +1,6 @@
 html,body{
     height: 100%;
-    font-family: 'DM Serif Display', serif;
+    font-family: domine,sans-serif;
 }
 .homeSection {
     width: 100%;
@@ -20,30 +20,59 @@ html,body{
     background: black;
 }
 
+.contactSection{
+    width: 100%;
+    height: 75%;
+    background: white;
+}
+
 .nameDisplay {
     top: 50%;
-    left: 15%;
+    left: 20%;
     position: absolute;
     color: white;
-    overflow: hidden;
+    width: fit-content;
 }
 
 .nameDisplay h1{
-    font-family: 'Lobster', cursive;
-    font-size: 96px;
+    font-family: expletus sans,sans-serif;
+    font-size: 6rem;
 }
 
 .aboutDisplay {
     top: 25%;
-    left: 15%;
-    position: absolute;
+    left: 20%;
+    position: relative;
+    width: fit-content;
 }
 
 .projectDisplay{
     top: 25%;
-    left: 15%;
-    position: absolute;
+    left: 20%;
+    position: relative;
     color:white;
+    width: fit-content;
+}
+
+.contactDisplay{
+    top: 25%;
+    left: 20%;
+    position: relative;
+    width: fit-content;
+}
+
+.contactDisplay .socialLinks{
+    font-size: 48px;
+}
+
+.socialLinks a{
+    text-decoration: none;
+    color: black;
+    padding:10px;
+}
+
+.socialLinks a:hover{
+    color: grey;
 }
 
 .homeSection .shadow-overlay {
@@ -52,4 +81,27 @@ html,body{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.subHead{
+    color: #4e48ee;
+    font-family: titillium web,sans-serif;
+    
+}
+
+.contactDisplay .mail{
+    text-decoration: none;
+    color: black;
+    font-size: 3em;
+}
+
+.contactDisplay .mail a:hover{
+    color: grey;
+}
+
+.head{
+    font-size: 4em;
+    margin-top: 4px;
+    margin-bottom: 10px;
+
 }
