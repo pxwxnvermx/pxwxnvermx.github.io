@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display:400i|Lobster&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Pawan Verma</title>
+</head>
+<body>
+    <section id="home" class="homeSection">
+        <div class="shadow-overlay">
+				<canvas class="scene scene--full" id="scene" style="width: 100%;height:100%;"></canvas>
+				<script type="x-shader/x-vertex" id="wrapVertexShader">
+					#define PI 3.1415926535897932384626433832795
+					attribute float size;
+					void main() {
+						vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+						gl_PointSize = 3.0;
+						gl_Position = projectionMatrix * mvPosition;
+					}
+				</script>
+				<script type="x-shader/x-fragment" id="wrapFragmentShader">
+					uniform sampler2D texture;
+					void main(){
+						vec4 textureColor = texture2D( texture, gl_PointCoord );
+						if ( textureColor.a < 0.3 ) discard;
+						vec4 dotColor = vec4(1.0, 1.0, 1.0, 0.1);
+						vec4 color = dotColor * textureColor;
+						gl_FragColor = color;
+					}
+				</script>            
+        </div>
+        <div class="nameDisplay">
+            <h1>Pawan Verma</h1>
+            <h3>--- Developer & Student</h3>
+        </div>
+    </section>
+    <section id="about" class="aboutSection" data-aos="fade-up">
+        <div class="aboutDisplay">
+            <h3 class="subHead">Hi I am Pawan</h3>
+            <h1>I make websites and memes.</h1>
+        </div>
+    </section>
+    <section id="projects" class="projectSection" data-aos="fade-up">
+        <div class="projectDisplay">
+            <h3>Projects</h3>
+        </div>
+    </section>
+
+    <script src="js/demo.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/demo2.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    
+</body>
+
+</html>
