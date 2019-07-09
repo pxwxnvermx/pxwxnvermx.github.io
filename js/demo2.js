@@ -1,6 +1,7 @@
 var canvas = document.querySelector('#scene');
-var width = canvas.offsetWidth,
-    height = canvas.offsetHeight;
+var params = document.getElementById("warp");
+var width = params.offsetWidth,
+    height = params.offsetHeight;
 
 var renderer = new THREE.WebGLRenderer({
     canvas: canvas,
@@ -74,8 +75,8 @@ function render(a) {
 function onResize() {
     canvas.style.width = '';
     canvas.style.height = '';
-    width = canvas.offsetWidth;
-    height = canvas.offsetHeight;
+    width = params.offsetWidth;
+    height = params.offsetHeight;
     camera.aspect = width / height;
     camera.updateProjectionMatrix();  
     renderer.setSize(width, height);

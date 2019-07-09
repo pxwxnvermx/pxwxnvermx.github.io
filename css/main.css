@@ -80,7 +80,7 @@ html,body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .subHead{
@@ -104,4 +104,69 @@ html,body{
     margin-top: 4px;
     margin-bottom: 10px;
 
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .nameDisplay h1{
+        font-size: 3rem;
+    }
+    .head{
+        font-size:1.5rem;
+    }
+    .contactDisplay .mail{
+        font-size: 1.5em;
+    }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .nameDisplay h1{
+        font-size: 3.5rem;
+    }
+    .head{
+        font-size:1.5rem;
+    }
+    .contactDisplay .mail{
+        font-size: 1.5em;
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .nameDisplay h1{
+        font-size: 4rem;
+    }
+    .head{
+        font-size:1.5rem;
+    }
+    .contactDisplay .mail{
+        font-size: 2em;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .nameDisplay h1{
+        font-size: 4rem;
+    }
+    .head{
+        font-size:1.5rem;
+    }
+    .contactDisplay .mail{
+        font-size: 2em;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .nameDisplay h1{
+        font-size: 5rem;
+    }
+    .head{
+        font-size:1.5rem;
+    }
+    .contactDisplay .mail{
+        font-size: 2em;
+    }
 }

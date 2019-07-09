@@ -15,8 +15,8 @@
 </head>
 <body>
     <section id="home" class="homeSection">
-        <div class="shadow-overlay">
-				<canvas class="scene scene--full" id="scene" style="width: 100%;height:100%;"></canvas>
+        <div class="shadow-overlay" id="warp">
+				<canvas class="scene scene--full" id="scene"></canvas>
 				<script type="x-shader/x-vertex" id="wrapVertexShader">
 					#define PI 3.1415926535897932384626433832795
 					attribute float size;
@@ -31,7 +31,7 @@
 					void main(){
 						vec4 textureColor = texture2D( texture, gl_PointCoord );
 						if ( textureColor.a < 0.3 ) discard;
-						vec4 dotColor = vec4(1.0, 1.0, 1.0, 0.1);
+						vec4 dotColor = vec4(1.0, 1.0, 1.0, 0.3);
 						vec4 color = dotColor * textureColor;
 						gl_FragColor = color;
 					}
@@ -62,9 +62,9 @@
             <a class="mail" href="mailto:pawanjbs5@gmail.com">pawanjbs5@gmail.com</a>
             <h3 class="subHead">/ FIND ME ELSEWHERE</h3>
             <div class="socialLinks" > 
-                <a href=""><i class="fa fa-steam"></i></a> 
-                <a href=""><i class="fa fa-instagram"></i></a> 
-                <a href=""><i class="fa fa-github"></i></a> 
+                <a href="https://steamcommunity.com/id/kamikaze1812"><i class="fa fa-steam"></i></a> 
+                <a href="https://www.instagram.com/the.pawan.verma/"><i class="fa fa-instagram"></i></a> 
+                <a href="https://github.com/pawanverma1337"><i class="fa fa-github"></i></a> 
             </div>
             
         </div>
