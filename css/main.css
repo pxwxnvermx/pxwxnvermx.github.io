@@ -109,26 +109,26 @@ html,body{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .nameDisplay h1{
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .head{
-        font-size:1.5rem;
+        font-size:1.2rem;
     }
     .contactDisplay .mail{
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .nameDisplay h1{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     .head{
-        font-size:1.5rem;
+        font-size:1rem;
     }
     .contactDisplay .mail{
-        font-size: 1.5em;
+        font-size: 1em;
     }
 } 
 
