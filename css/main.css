@@ -1,42 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins&display=swap');
+
 html,body{
     height: 100%;
-    font-family: domine,sans-serif;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 .homeSection {
     width: 100%;
-    height: 100%;
-    background: black;
+    height: 100vh; 
+    background: #1a1c20;
+    overflow: hidden;
+    display: block;
 }
 
 .aboutSection{
     width: 100%;
-    height: 50%;
-    background: white;
+    height: 50vh;
+    display: block;
 }
 
 .projectSection{
     width: 100%;
-    height: 100%;
-    background: black;
+    height: 100vh;
+    background: #1a1c20;
+    display: block;
 }
 
 .contactSection{
     width: 100%;
-    height: 75%;
-    background: white;
+    height: 75vh;
+    display: block;
 }
 
 .nameDisplay {
-    top: 50%;
+    top: 35%;
     left: 20%;
     position: absolute;
     color: white;
     width: fit-content;
+    width: -moz-fit-content;
 }
 
 .nameDisplay h1{
-    font-family: expletus sans,sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 6rem;
+    text-shadow: 2px 2px 8px #000000;
 }
 
 .aboutDisplay {
@@ -44,14 +52,22 @@ html,body{
     left: 20%;
     position: relative;
     width: fit-content;
+    width: -moz-fit-content;
 }
 
 .projectDisplay{
-    top: 25%;
-    left: 20%;
+    top: 15vh;
+    left: 20vw;
     position: relative;
     color:white;
     width: fit-content;
+    width: -moz-fit-content;
+    overflow: hidden;
+}
+
+.projects{
+    width: 60vw;
+    color: white;
 }
 
 .contactDisplay{
@@ -59,6 +75,7 @@ html,body{
     left: 20%;
     position: relative;
     width: fit-content;
+    width: -moz-fit-content;
 }
 
 .contactDisplay .socialLinks{
@@ -84,9 +101,7 @@ html,body{
 }
 
 .subHead{
-    color: #4e48ee;
-    font-family: titillium web,sans-serif;
-    
+    color: #3282b8;
 }
 
 .contactDisplay .mail{
@@ -103,8 +118,112 @@ html,body{
     font-size: 4em;
     margin-top: 4px;
     margin-bottom: 10px;
-
 }
+
+.gradientAnim {
+    background: linear-gradient(331deg, #1a1c20, #000000);
+    background-size: 400% 400%;
+
+    -webkit-animation: GradientAnimation 30s ease infinite;
+    -moz-animation: GradientAnimation 30s ease infinite;
+    animation: GradientAnimation 30s ease infinite;
+}
+
+@-webkit-keyframes GradientAnimation {
+    0%{background-position:34% 0%}
+    50%{background-position:67% 100%}
+    100%{background-position:34% 0%}
+}
+@-moz-keyframes GradientAnimation {
+    0%{background-position:34% 0%}
+    50%{background-position:67% 100%}
+    100%{background-position:34% 0%}
+}
+@keyframes GradientAnimation {
+    0%{background-position:34% 0%}
+    50%{background-position:67% 100%}
+    100%{background-position:34% 0%}
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .cards_item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 56rem) {
+    .cards_item {
+        width: 33.3333%;
+    }
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 1.2s;
+    border: 1px solid white;
+}
+
+.card_content {
+    padding: 1rem;
+    background:  #1a1c20;
+    height: 200px;
+}
+
+.card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 400;
+}
+
+.shadow { 
+    color: white; 
+    font: bold 52px Helvetica, Arial, Sans-Serif;
+    text-shadow: 1px 1px #fe4902, 
+                 2px 2px #fe4902, 
+                 3px 3px #fe4902;
+    -webkit-transition: all 0.12s ease-out;
+    -moz-transition:    all 0.12s ease-out;
+    -ms-transition:     all 0.12s ease-out;
+    -o-transition:      all 0.12s ease-out;
+ }
+ .shadow:hover {
+    position: relative; 
+    top: -3px; 
+    left: -3px; 
+    text-shadow: 1px 1px #fe4902, 
+                 2px 2px #fe4902, 
+                 3px 3px #fe4902, 
+                 4px 4px #fe4902, 
+                 5px 5px #fe4902, 
+                 6px 6px #fe4902;
+ }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -116,6 +235,9 @@ html,body{
     }
     .contactDisplay .mail{
         font-size: 1.2em;
+    }
+    .projectSection {
+        height: 120vh;
     }
 } 
 

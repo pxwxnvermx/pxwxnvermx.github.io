@@ -22,78 +22,103 @@
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:600,300|Expletus+Sans:300,700|Domine:400,700">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Titillium+Web:600,300|Expletus+Sans:300,700|Playfair+Display">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Pawan Verma</title>
 </head>
+
 <body>
-    <section id="home" class="homeSection">
-        <div class="shadow-overlay" id="warp">
-				<canvas class="scene scene--full" id="scene"></canvas>
-				<script type="x-shader/x-vertex" id="wrapVertexShader">
-					#define PI 3.1415
-					attribute float size;
-					void main() {
-						vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-						gl_PointSize = 3.0;
-						gl_Position = projectionMatrix * mvPosition;
-					}
-				</script>
-				<script type="x-shader/x-fragment" id="wrapFragmentShader">
-					uniform sampler2D texture;
-					void main(){
-						vec4 textureColor = texture2D( texture, gl_PointCoord );
-						if ( textureColor.a < 0.3 ) discard;
-						vec4 dotColor = vec4(1.0, 1.0, 1.0, 0.3);
-						vec4 color = dotColor * textureColor;
-						gl_FragColor = color;
-					}
-				</script>            
+
+    <div id="home" class="homeSection gradientAnim">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div id='title'>
+            <div class="nameDisplay">
+                <h1>Pawan Verma</h1>
+                <h3>Developer & Student</h3>
+            </div>
         </div>
-        <div class="nameDisplay">
-            <h1>Pawan Verma</h1>
-            <h3>--- Developer & Student</h3>
-        </div>
-    </section>
-    <section id="about" class="aboutSection" >
+    </div>
+
+    <div id="about" class="aboutSection ">
         <div class="aboutDisplay" data-aos="fade-up">
-            <h3 class="subHead" >/ HI I AM PAWAN,</h3>
+            <h3 class="subHead">/ HI I AM PAWAN,</h3>
             <h3 class="head">I make websites and memes.</h3>
         </div>
-    </section>
-    <section id="projects" class="projectSection">
+    </div>
+
+    <div id="projects" class="projectSection">
         <div class="projectDisplay" data-aos="fade-up">
-            <h3 class="subHead" >/ I MAKE THINGS.</h3>
-            <h3 class="head" >Some of my works</h3>
+            <h3 class="subHead">/ I MAKE THINGS.</h3>
+            <h3 class="head">Some of my works</h3>
+            <div class="projects">
+                <ul class="cards">
+                    <li class="cards_item">
+                        <div class="card">
+                            <div class="card_content">
+                                <h2 class="card_title">Portfolio</h2>
+                                <p class="card_text">My personal project showcase and portfolio website.</p>
+                                <button class="btn card_btn"
+                                    onclick="location.href='https://github.com/PawanVerma1337/pawanverma1337.github.io';">Read
+                                    More</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cards_item">
+                        <div class="card">
+                            <div class="card_content">
+                                <h2 class="card_title">Meme boi</h2>
+                                <p class="card_text">A bot written in python to post memes to telegram channels.</p>
+                                <button href="" class="btn card_btn"
+                                    onclick="location.href='https://github.com/PawanVerma1337/memeboi';">Read
+                                    More</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cards_item">
+                        <div class="card">
+                            <div class="card_content">
+                                <h2 class="card_title">Goodreads Quotes scraper</h2>
+                                <p class="card_text">A multithreaded python script to scrape quotes from goodreads
+                                    author url.</p>
+                                <button href="" class="btn card_btn"
+                                    onclick="location.href='https://github.com/PawanVerma1337/quotes-scraper';">Read
+                                    More</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
-    <section id="contact-me" class="contactSection" >
+
+
+    </div>
+    <div id="contact-me" class="contactSection">
         <div class="contactDisplay" data-aos="fade-up">
-            <h3 class="subHead" >/ I'D LOVE TO TALK</h3>
-            <h3 class="head" >Contact</h3>
+            <h3 class="subHead">/ I'D LOVE TO TALK</h3>
+            <h3 class="head">Contact</h3>
             <hr>
             <a class="mail" href="mailto:pawanjbs5@gmail.com">pawanjbs5@gmail.com</a>
             <h3 class="subHead">/ FIND ME ELSEWHERE</h3>
-            <div class="socialLinks" > 
-                <a href="https://steamcommunity.com/id/kamikaze1812"><i class="fa fa-steam"></i></a> 
-                <a href="https://www.instagram.com/the.pawan.verma/"><i class="fa fa-instagram"></i></a> 
-                <a href="https://github.com/pawanverma1337"><i class="fa fa-github"></i></a> 
+            <div class="socialLinks">
+                <a href="https://steamcommunity.com/id/kamikaze1812" target="blank"><i class="fa fa-steam"></i></a>
+                <a href="https://www.instagram.com/pxwxnvermx/" target="blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/pawanverma1337" target="blank"><i class="fa fa-github"></i></a>
+                <a href="https://twitter.com/pxwxnvermx" target="blank"><i class="fa fa-twitter"></i></a>
             </div>
-            
-        </div>
-    </section>
 
-    <script src="js/demo.js"></script>
-    <script src="js/three.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/demo2.js"></script>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    
 </body>
 
 </html>
