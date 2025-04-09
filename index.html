@@ -1,5 +1,12 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" 
+      x-data="{
+        theme: localStorage.getItem('theme') || 'light',
+        toggle() {
+          this.theme = this.theme == 'dark' ? 'light' : 'dark';
+          localStorage.setItem('theme', this.theme) 
+        }
+      }">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -21,9 +28,22 @@
     <title>Pawan Verma</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/main.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
   </head>
-  <body>
-    <h1>pxwxnvermx</h1>
+  <body x-bind:data-theme="theme">
+    <nav class="navbar">
+      <h1>pxwxnvermx</h1>
+
+      <label for="theme-toggle" style="margin-left: auto">
+        <small> Theme: <span x-text="theme"></span></small>&nbsp;
+        <input type="checkbox" 
+               role="switch" 
+               id="theme-toggle" 
+               value="dark" 
+               @change="toggle()" 
+               x-bind:checked="theme == 'dark'" />
+      </label>
+    </nav>
 
     <p>
     Hi! My name is Pawan Verma. I'm Software Engineer at Dimagi.
