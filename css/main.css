@@ -3,15 +3,15 @@
 [data-theme="light"] {
 	--color-bg: #FEFEFA;
 	--color-fg: #111111;
-	--color-a: #F0F8FF;
 	--color-a-hover: #00B9E8;
+	--color-a-visited: #0077b6;
 }
 
 [data-theme="dark"] {
 	--color-bg: #111111;
 	--color-fg: #FEFEFA;
-	--color-a: #F0F8FF;
 	--color-a-hover: #00B9E8;
+	--color-a-visited: #0077b6;
 }
 
 body {
@@ -26,13 +26,16 @@ body {
 }
 
 a {
-	text-decoration: none;
-	color: var(--color-a);
+	text-underline-offset: 4px;
+	color: var(--color-fg);
 }
 
-a:visited { color: inherit; }
+a:visited {
+	color: var(--color-a-visited); 
+}
 
 a:hover {
+	text-underline-offset: 8px;
 	color: var(--color-a-hover);
 }
 
